@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <button type="button" name="btn btn-danger" onclick="saySomething('this is the first button')">
+        My Button
+      </button>
+      <button type="button" name="btn btn-danger" onclick="saySomething('this is the second button')">
+        My Button
+      </button>
+    </div>
+    <script>
+      function saySomething(message = 'goodbye', whisper = false) {
+        if (whisper) {
+          console.log(`%c${message}`, 'font-size: 5px');
+        } else {
+          console.log(message);
+        }
+      }
+
+      saySomething('hello', true);
+
+      saySomething();
+
+      saySomething('my name is Sarah', true);
+
+      // function squared(a) {
+      //   return a * a;
+      // }
+      // const newSquared = squared(4);
+      // console.log(newSquared);
+
+      // storing a function as a variable
+      const squared = function(a) {
+        return a * a;
+      }
+      const otherSquare = squared;
+
+      // JS hoisting
+      punch();
+
+      function punch() {
+        console.log('punch here');
+      }
+    </script>
+  </body>
+</html>
